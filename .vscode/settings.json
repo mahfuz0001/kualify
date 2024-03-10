@@ -1,0 +1,15 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "driver": "MySQL",
+      "connectString": "mysql://root:admin@localhost:3306",
+      "name": "kualify"
+    }
+  ]
+}
