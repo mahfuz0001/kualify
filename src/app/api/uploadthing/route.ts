@@ -1,6 +1,6 @@
-import { createNextRouteHandler } from 'uploadthing/next'
+import { createRouteHandler } from "uploadthing/next";
+export const runtime = "nodejs";
 
-import { ourFileRouter } from './core'
+import { ourFileRouter } from "./core";
 
-export const { GET, POST } = createNextRouteHandler({ router: ourFileRouter })
-
+export const { GET, POST } = createRouteHandler({ router: ourFileRouter });
