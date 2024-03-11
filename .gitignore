@@ -38,3 +38,4 @@ next-env.d.ts
 kualify.session.sql
 .env
 .env.local
+linecount.py
