@@ -18,6 +18,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { LampContainer } from "@/components/ui/lamp";
 import { TracingBeam } from "@/components/ui/tracing-beam";
+import { Macbook } from "@/components/site/macbook";
 
 export default async function Home() {
   const prices = await stripe.prices.list({
@@ -34,7 +35,7 @@ export default async function Home() {
         {/* Lamp Boii */}
 
         {/* Hero */}
-        <div className="h-[40rem] w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
+        <div className="h-[100rem] w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
           <div className="bg-gradient-to-r from-primary to-secondary-foreground text-transparent bg-clip-text relative">
             <h1 className="text-9xl font-bold text-center md:text-[300px]">
               Kualify
@@ -67,22 +68,56 @@ export default async function Home() {
           </h1>
         </div> */}
       </section>
+
+      {/* Macbook scroll */}
+      <section className="">
+        <Macbook />
+      </section>
       {/* infinity testimonial */}
-      <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-        <InfiniteMovingCards
-          items={testimonials}
-          direction="right"
-          speed="slow"
-        />
-      </div>
-      {/* pricing */}
-      <section className="flex justify-center items-center flex-col gap-4 md:!mt-20 mt-[-60px]">
+      <section className="">
         <h2 className="text-4xl text-center"> Choose what fits you right</h2>
         <p className="text-muted-foreground text-center">
           Our straightforward pricing plans are tailored to meet your needs. If
           {" you're"} not <br />
           ready to commit you can get started for free.
         </p>
+        <div className="h-[20rem] rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+          <InfiniteMovingCards
+            items={testimonials}
+            direction="right"
+            speed="slow"
+          />
+        </div>
+      </section>
+
+      <React.Fragment>
+        <section
+          className="flex
+        flex-col
+        gap-4
+        justify-center
+        items-start
+        md:items-center
+      "
+        ></section>
+      </React.Fragment>
+
+      {/* pricing */}
+      <section className="flex justify-center items-center flex-col gap-4 md:!mt-20 mt-[-60px]">
+        <article className="relative">
+          <div className="rounded-full p-[1px] bg-gradient-to-r from-brand-primaryBlue to-brand-primaryPurple absolute top-0 left-0 right-0 h-[1px]" />
+          <div className="rounded-full p-[1px] text-sm bg-gradient-to-r from-brand-primaryBlue to-brand-primaryPurple relative">
+            <div className="rounded-full px-3 py-1">Pricing</div>
+          </div>
+        </article>
+        <h2 className="text-left text-3xl sm:text-5xl sm:max-w-[750px] md:text-center font-semibold">
+          Choose what fits you right
+        </h2>
+        <p className="dark:text-washed-purple-700 sm:max-w-[450px] md:text-center">
+          Our straightforward pricing plans are tailored to meet your needs. If
+          you're not ready to commit you can get started for free.
+        </p>
+
         <div className="flex  justify-center gap-4 flex-wrap mt-6">
           {prices.data.map((card) => (
             //WIP: Wire up free product from stripe
