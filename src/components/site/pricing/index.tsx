@@ -49,7 +49,7 @@ export default async function Pricing() {
 
       <p className="dark:text-washed-purple-700 sm:max-w-[450px] md:text-center">
         Our straightforward pricing plans are tailored to meet your needs. If
-        you're not ready to commit you can get started for free.
+        you&apos;re not ready to commit you can get started for free.
       </p>
 
       <div className="flex  justify-center gap-4 flex-wrap mt-6">
