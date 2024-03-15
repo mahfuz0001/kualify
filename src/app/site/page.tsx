@@ -22,6 +22,7 @@ import { Macbook } from "@/components/site/macbook";
 import Pricing from "@/components/site/pricing";
 import Testimonials from "@/components/site/testimonials";
 import Encryption from "@/components/site/encryption";
+import Footer from "@/components/site/footer";
 
 export default async function Home() {
   const prices = await stripe.prices.list({
@@ -75,7 +76,8 @@ export default async function Home() {
       <Macbook />
       <Testimonials />
       <Pricing />
-      <Encryption />
+      {/* <Encryption /> */}
+      <Footer />
     </>
   );
 }
